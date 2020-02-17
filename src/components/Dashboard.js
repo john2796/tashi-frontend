@@ -117,7 +117,7 @@ export default function DashBoard(props) {
           <Typography
             className={classes.title}
             noWrap
-            onClick={() => props.history.push('/dashboard')}
+            onClick={() => props.history.push('/')}
             variant="h6">
             Tok Health University
           </Typography>
