@@ -1,16 +1,12 @@
 # tashi-frontend
 
-### Live website : https://tashi.netlify.com/ 
+
 
 ## GETTING STARTED
+You can view live demo over at  https://tashi.netlify.com/ 
 
-- Fork or clone repository 
-- Use `yarn create react-app <name>` to create new application
-- Install these dependencies using `yarn add` or `npm install`:
-  - `react-redux`
-  - `redux`
-  - `axios`
-  - `redux-logger`
-  - `redux-thunk`
-  - `react-router`
-  - `react-router-dom`
+To get the frontend running locally
+- Clone this repo
+- `npm install` to install all req`d dependencies
+- `npm start` to start the local server (this project uses creater-react-app)
+
