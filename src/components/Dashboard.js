@@ -143,12 +143,8 @@ export default function DashBoard(props) {
 
       <main className={classes.content}>
         <Paper elevation={3}>
-          <Route
-            exact
-            path="/dashboard"
-            render={props => <MaterialUiTable />}
-          />
-          <Route component={SubjectContainer} path="/dashboard/subject/:id" />
+          <Route exact path="/" render={props => <MaterialUiTable />} />
+          <Route component={SubjectContainer} path="/subject/:id" />
         </Paper>
       </main>
       <BackropLoader loading={isLoading} />

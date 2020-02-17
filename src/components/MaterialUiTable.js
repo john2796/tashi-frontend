@@ -104,7 +104,7 @@ function MaterialUiTable(props) {
                     alt="calendar icon"
                     className={classes.calendarIcon}
                     onClick={() => {
-                      props.history.push(`/dashboard/subject/${student.id}`);
+                      props.history.push(`/subject/${student.id}`);
                     }}
                     src={calendarIcon}
                   />
