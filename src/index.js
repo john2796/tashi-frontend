@@ -1,9 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { App } from './App';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, withRouter } from 'react-router-dom';
+import Toasts from './components/Toasts.js';
 
-import * as serviceWorker from './serviceWorker';
-import App from './App';
+import store from './store/store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const AppWithRouter = withRouter(App);
+const app = (
+  <Provider store={store}>
+    <Router>
+      <AppWithRouter />
+    </Router>
+    <Toasts />
+  </Provider>
+);
 
-serviceWorker.unregister();
+render(app, document.getElementById('root'));
