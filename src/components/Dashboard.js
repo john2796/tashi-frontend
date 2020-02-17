@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
 import MaterialUiTable from './MaterialUiTable';
@@ -102,7 +102,7 @@ const useStyles = makeStyles(theme => ({
   googleplay: { maxWidth: '94%' }
 }));
 
-export default function DashBoard(props) {
+function DashBoard(props) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { isLoading } = useSelector(state => state.studentReducer);
@@ -151,3 +151,4 @@ export default function DashBoard(props) {
     </div>
   );
 }
+export default withRouter(DashBoard);
